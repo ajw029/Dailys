@@ -1,0 +1,14 @@
+module.exports = {
+  WeatherUnlocked_APP_ID: "f7cd3515",
+  WeatherUnlocked_APP_KEY: '258a7d5b44fff146718b7c175908a5e0',
+  ECRYPT_KEY: "aes-256-ctr",
+  ENCRYPT_PASS: "OMG_SUCH_DOGE_666_777",
+  SESSION_KEY: 'OMG_NODE_SESSIONc00l',
+  DATABASE_HOST: 'localhost',
+  DATABASE_USER: 'root',
+  DATABASE_PASSWORD: '88619463',
+  DATABASE_PORT: 3306,
+  DATABASE_NAME: 'bookmarx',
+  MAPS_API: 'AIzaSyAF8-sk3XQ4zTYIXmWsGiiRRQ-QoqBG5y8',
+  PORT:8080 
+};

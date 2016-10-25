@@ -1,0 +1,885 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./font/Roboto-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+button, input {
+	outline:none;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.directions {
+	font-size: 14px;
+	font-style: italic;
+	color: #b6b6b6;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+  box-sizing: border-box;
+}
+body {
+	height: calc(100vh - 48px);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hide {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+.show {
+	display:block;
+}
+
+.notification-card .card__action-bar .card__button,
+.trackPackage_template .card__action-bar {
+  line-height: 32px;
+  padding: 0 8px;
+  color: #FF1744;
+}
+
+.mainContent {
+  width: calc(100% - 192px);
+  vertical-align: top;
+  display: inline-block;
+}
+.package_tracking_info {
+	height: 144px !important;
+}
+.trackPackage_template {
+	width: 100%;
+	position: relative;
+}
+
+.dropdown-container {
+	position: relative;
+	z-index: 9999;
+	top: 0;
+	right: 0;
+	display: block;
+}
+.dropdown-content {
+	position: fixed;
+	right: 0;
+	top: 48px;
+	z-index: 9999;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	-webkit-transform: translateZ(0);
+}
+
+.dropdown-content button {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+.dropdown-content button:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+
+.searchContainer {
+	display: inline-block;
+	text-align: center;
+	padding-top: 6px;
+	vertical-align: top;
+}
+
+.navbar-right {
+	position: absolute;
+	right: 8px;
+}
+
+/* Bookmark */
+.bookmark {
+	width: 95%;
+	background-color: white;
+	height: 104px;
+	display: block !important;
+	position: relative;
+	padding: 16px;
+	/*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+	box-shadow:0 1px 2px #aaa;
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+
+.noFolderBookmark{
+	width: 100% !important;
+}
+
+.bookmark a {
+	width: 100%;
+	height: 100%;
+	display:block;
+}
+.bookmark .fab {
+	z-index: 9997;
+}
+
+.bookmark:hover {
+  /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+}
+
+/* Add style for containers*/
+.container{
+	width:100%;
+	height: 100%;
+}
+
+.side-nav-container {
+	display: inline;
+	float: left;
+	width: 10%;
+	margin-top: 24px;
+	padding-left: 16px;
+}
+
+.side-nav-container .active a {
+	box-shadow: inset 0 0px 0 white, inset 0 -1px 0 #2196F3;
+}
+
+.side-nav-container h2 {
+	font-size: 22px;
+	font-weight: 300;
+	margin-bottom: 16px;
+	text-align: left;
+}
+.side-nav-divider {
+	border-bottom: 1px solid #dcdce0;
+	height: 1px;
+  padding: .6em 0 0;
+}
+
+.side-nav-container li {
+	list-style: none;
+  margin-bottom: 8px;
+}
+
+.side-nav-container li a {
+	font-size: 20px;
+	text-align: left;
+	color: black;
+}
+.side-nav-container li a:hover {
+	color: #2196F3;
+	cursor: pointer;
+}
+
+.right-container{
+	display: inline;
+	float:left;
+ 	width: 40%;
+	margin-top: 48px;
+}
+
+.content-container {
+	width: 100%;
+}
+.slide-container {
+	display: inline;
+	float:left;
+ 	width: 33.33%;
+	margin: 0 auto;
+}
+
+.folderContainer {
+	margin: 0 auto;
+	margin-bottom: 16px !important;
+	text-align: center;
+}
+.folder:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.folder {
+	background-color: white;
+	height: 32px;
+	border-radius: 1px;
+	display: block !important;
+	position: relative;
+	box-shadow:0 1px 2px #aaa;
+	margin: 0 auto;
+	margin-bottom: 4px;
+}
+.folder button.folderToggle {
+	display: inline-block;
+	height: 100%;
+	width: 85%;
+	position: absolute;
+	left: 0;
+}
+.folder button {
+	height: 100%;
+	float: right;
+}
+.folder button img {
+	height: 80%;
+	vertical-align: middle;
+}
+
+.folder button img:hover {
+	-webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    animation: scale(1.15);
+}
+
+.folder button.folderToggle img  {
+	height: 100% !important;
+	vertical-align: top;
+	float: left;
+	margin-left: 8px;
+}
+.folder h2 {
+	display: inline-block;
+	padding: 5px;
+	padding-left: 16px;
+	line-height: 22px;
+	font-size: 22px;
+	margin-left: 32px;
+	color: #4c4c4c;
+	vertical-align: top;
+}
+
+.folderContent ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	height: 100%;
+}
+
+.openFolderAnim {
+	-webkit-animation: openFolderFrames .350s ease-in-out forwards;
+   -moz-animation:    openFolderFrames .350s ease-in-out forwards;
+   -o-animation:      openFolderFrames .350s ease-in-out forwards;
+   animation:         openFolderFrames .350s ease-in-out forwards;
+}
+.removeFolderAnim {
+	-webkit-animation: removeFolderFrames .350s forwards;
+   -moz-animation:    removeFolderFrames .350s forwards;
+   -o-animation:      removeFolderFrames .350s forwards;
+   animation:         removeFolderFrames .350s forwards;
+}
+
+@keyframes openFolderFrames{
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(90deg) ;
+  }
+}
+
+@keyframes removeFolderFrames{
+  0% {
+    transform: rotate(90deg) ;
+  }
+  100% {
+    transform: rotate(0deg) ;
+  }
+}
+
+.card__action-bar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+	padding: 0 8px;
+  border-top: 1px solid #E0E0E0;
+  boz-sizing: border-box;
+  height: 32px;
+  -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__button {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  line-height: 32px;
+  padding: 0 8px;
+}
+.card__button.right__button {
+	float: right;
+}
+.card__action-bar img {
+}
+.card__button:hover {
+	color: #2196F3;
+}
+button {
+  border: none;
+  background: transparent;
+	font-weight: 400;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button.right {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button.boxButton {
+	width: 100%;
+	height: 32px;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 16px;
+}
+.closeButton {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+.deleteConfirmationContainer {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+.deleteConfirmationContainer .confDelete {
+	display: inline-block;
+	width: 40px;
+	color: white;
+}
+
+.deleteConfirmationContainer .confDelete:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.closeButton img{
+	width: 16px;
+	height: 16px;
+	z-index: 5;
+}
+
+.okayButton {
+	background-color: #4CAF50;
+}
+.deleteButton {
+	background-color: #F44336;
+}
+.cancelButton {
+	background-color: #FFA000;
+}
+button.boxButton:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button.fab {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	width: 54px;
+	height: 54px;
+	background-color: #2196F3;
+	border-radius: 100%;
+	box-shadow:0 1px 2px #aaa;
+	z-index: 9999;
+}
+.mini-fab-container {
+	position: fixed;
+	bottom: 24px;
+	right: 26px;
+	width: 32px;
+	height: 128px;
+	z-index: 9999;
+}
+button.mini-fab {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	background-color: #2196F3;
+	border-radius: 100%;
+	box-shadow:0 1px 2px #aaa;
+	z-index: 9999;
+	display: block;
+	margin-bottom: 8px;
+}
+button.mini-fab:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+button.mini-fab img {
+	position: relative;
+	height: 75%;
+	top: 2.5px;
+}
+.rotateFab {
+	-webkit-animation: rotateFabButton .200s ease-in-out forwards;
+   -moz-animation:    rotateFabButton .200s ease-in-out forwards;
+   -o-animation:      rotateFabButton .200s ease-in-out forwards;
+   animation:         rotateFabButton .200s ease-in-out forwards;
+}
+.unRotateFab {
+	-webkit-animation: unRotateFabButton .200s ease-in-out forwards;
+   -moz-animation:    unRotateFabButton .200s ease-in-out forwards;
+   -o-animation:      unRotateFabButton .200s ease-in-out forwards;
+   animation:         unRotateFabButton .200s ease-in-out forwards;
+}
+.rollin {
+	-webkit-animation: rollIn .350s ease-in-out forwards;
+   -moz-animation:    rollIn .350s ease-in-out forwards;
+   -o-animation:      rollIn .350s ease-in-out forwards;
+   animation:         rollIn .350s ease-in-out forwards;
+}
+.rollout {
+	-webkit-animation: rollOut .350s ease-in-out forwards;
+   -moz-animation:    rollOut .350s ease-in-out forwards;
+   -o-animation:      rollOut .350s ease-in-out forwards;
+   animation:         rollOut .350s ease-in-out forwards;
+}
+/* Keyframes for mini fab animations */
+@keyframes rotateFabButton{
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(45deg) ;
+  }
+}
+@keyframes unRotateFabButton{
+  0% {
+    transform: rotate(45deg) ;
+  }
+  100% {
+    transform: rotate(0deg) ;
+  }
+}
+@keyframes rollIn {
+   0% { opacity: 0; transform: translateX(100%) rotate(120deg); }
+   100% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+}
+@keyframes rollOut {
+   0% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+   100% { opacity: 0; transform: translateX(100%) rotate(120deg); }
+}
+/* Overlay */
+.overlay {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgba(229,229,229,.5);
+}
+.overlaySlide {
+	position: absolute !important;
+	top: 25%;
+	z-index: 9999;
+	padding: 0;
+	left: 0;
+	right: 0;
+	height: auto !important;
+}
+.overlay:hover {
+	cursor: pointer;
+}
+img, button {
+	/*z-index: 9997;*/
+}
+
+.card__action-bar button.fab {
+	position: absolute;
+	right: 4px;
+	top: -20px;
+	background-color: #727272;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.favorite {
+	background-color: #FFC107 !important;
+}
+button.fab img {
+	position: relative;
+	height: 50%;
+	width: 50%;
+	top: 2.5px;
+}
+
+button.fab:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.unexpandedcard {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+div#deleteTodoContainer.flatButtonContainer {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Ripple */
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+/* Form */
+.formcontainer {
+	background-color: white;
+	padding: 32px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	margin-top: 48px !important;
+}
+
+.formcontainer h2, .formcontainer h1 {
+	text-align: center;
+	margin-bottom: 16px;
+}
+form {
+	margin: 0 auto;
+}
+
+.inputgroup {
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+}
+
+.settinggroup {
+	width: 300px;
+	position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+	border-bottom: 1px solid grey;
+}
+.settinggroup button{
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+}
+.labelgroup {
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+}
+
+.deleteConf {
+	color: red;
+	text-align: center;
+}
+.inputgroup input {
+  font-size:18px;
+  display:block;
+  width:200px;
+  border:none;
+	margin-bottom: 20px;
+  border: none;
+  padding: 10px 0;
+  /*color: black;*/
+  border-bottom:1px solid #757575;
+}
+.inputgroup input:focus{
+  outline:none;
+}
+
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 16px;
+  color: rgba(0,0,0, 1);
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0, 0.12);
+	margin-bottom: 20px;
+}
+
+/* Remove focus */
+select:focus {
+  outline: none;
+}
+
+.inputgroup label {
+  margin: 0 !important;
+  color:black;
+  font-weight: 200;
+  font-size:16px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.inputgroup input:focus ~ label, .inputgroup input:valid ~ label 		{
+  top:-5px;
+  font-size:14px;
+  color:#ED2553;
+}
+
+.inputgroup .bar 	{
+  position:relative;
+  display:block;
+  width:100%;
+}
+
+.inputgroup .bar:before, .inputgroup .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:19px;
+  position:absolute;
+  background:#ED2553;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.inputgroup .bar:before {
+  left:50%;
+}
+.inputgroup .bar:after {
+  right:50%;
+}
+
+/* active state */
+.inputgroup input:focus ~ .bar:before, .inputgroup input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.inputgroup .highlight {
+  position:absolute;
+  height:100%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:1;
+}
+
+/* active state */
+.inputgroup input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#ED2553; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+/* Column / Grid System*/
+
+.expandedcard {
+	height: 275px;
+	width: 100%;
+}
+/*
+.slide-container {
+  width: 100%;
+	margin-top: 48px;
+}
+*/
+.slide {
+  position: relative;
+	height: 100%;
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px 0;
+  display: block;
+}
+
+.slide .column-10 {
+	width: 10%;
+}
+.slide .column-20 {
+	width: 20%;
+}
+.slide .column-25 {
+	width: 24%;
+}
+
+.slide .column-33 {
+	width: 33%;
+}
+
+.slide .column-40 {
+	width: 39%;
+}
+
+.slide .column-50 {
+	width: 49%;
+}
+
+.slide .column-100 {
+	width: 100%;
+
+}
+[class*="column-"] {
+	display: block;
+	text-align: left;
+	vertical-align: top;
+	margin: 0 auto;
+}
+
+h1,h2,h3,h4 {
+	font-weight:100;
+	color: black;
+}
+h2 {
+	font-size: 22px;
+}
+h3 {
+	color: #666666;
+	font-size: 16px;
+}
+
+.desktopView {
+	display: block;
+}
+.mobileView {
+	display: none;
+}
+@media screen and (max-width : 1280px){
+	.slide .column-40 {
+		width: 49%;
+	}
+}
+
+@media screen and (max-width : 1080px){
+	.slide .column-40 {
+		width: 60%;
+	}
+	.side-nav-container li button {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width : 856px){
+	@keyframes openFolderFrames{
+	  0% {
+	    transform: rotate(0deg) ;
+	  }
+	  100% {
+	    transform: rotate(180deg) ;
+	  }
+	}
+
+	@keyframes removeFolderFrames{
+	  0% {
+	    transform: rotate(180deg) ;
+	  }
+	  100% {
+	    transform: rotate(0deg) ;
+	  }
+	}
+	.desktopView {
+		display: none;
+	}
+	.mobileView {
+		display: block !important;
+	}
+	.settinggroup {
+		width: 80%;
+	}
+	.slide-container {
+		display: inline;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.right-container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.slide {
+		width: 80%;
+	}
+	.navbar-hide {
+		display: none;
+	}
+	.slide .column-40 {
+		width: 100%;
+	}
+	.nav-title {
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+	.searchContainer input {
+		margin: 0 0 0 8px;
+		width: 55%;
+	}
+}

@@ -1,0 +1,152 @@
+.bookmark.todo .todoListContainer {
+  overflow-y: auto;
+}
+
+/* TODO */
+
+.bookmark.todo {
+	height: 364px;
+}
+.bookmark.todo .todoListContainer {
+}
+.todoListContainer h2 {
+	margin-top: 16px;
+}
+.todoAddContainer {
+	height: 100%;
+	width: 100%;
+	z-index: 5000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	padding: 8px;
+}
+.todoAddInnerContainer h1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 20px;
+}
+#todo_viewingMyTodoContainer .todoAddInnerContainer h1 {
+	text-align: left;
+	width: 100%;
+}
+
+.todoObject .labelContainer {
+
+}
+
+.todoObject .todo_actionContainer {
+  box-shadow: none;
+  height: 37px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 70px;
+}
+.todoObject:hover {
+    cursor: pointer;
+}
+.labelContainer:hover~.todo_actionContainer, .todo_actionContainer:hover {
+  display: block !important;
+}
+
+.todoObject .todo_actionContainer {
+  display: none;
+}
+
+
+.todoAddInnerContainer {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 9998;
+}
+.todoAddContainer label, .todoAddContainer span {
+	display: inline-block;
+	width: auto !important;
+}
+.todoAddContainer .label--checkbox {
+	margin: 2px;
+}
+.editDaysOfWeekTodo {
+	width: 75%;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	text-align: center;
+}
+.todoAddInnerContainer h1 {
+	text-align: center;
+}
+.todoAddContainer .checkbox {
+	width: 4px;
+}
+#todo_actionfab {
+	z-index: 4000!important;
+}
+.todoAddContainer textarea {
+	min-height: 80px;
+	max-height: 80px;
+	width: 200px;
+	max-width: 200px;
+	border: 1px solid #aaa;
+	outline: none;
+	margin: 0 auto;
+}
+.todoMoreInfo {
+	min-height: 280px;
+	box-shadow: none !important;
+}
+.todoEditSection {
+	min-height: 280px;
+	box-shadow: none !important;
+}
+.todoEditSection textarea {
+	border: 1px solid #aaa;
+}
+.todo ul {
+	list-style-type: none;
+	display: block;
+}
+.todo button.settings{
+	height: 22px;
+  font-size: 22px;
+	vertical-align: middle;
+  margin: 0 4px;
+}
+.todo button.settings {
+  color: #616161;
+}
+.todo button.settings:hover {
+  color: black;
+}
+
+.todo button.settings img {
+	height: 100%;
+}
+.todo .fab, .package .fab, .schedule .fab {
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	right: 8px;
+	bottom: 8px;
+	background-color: #E91E63 !important;
+}
+.todoAddInnerContainer .fab {
+	right: 0;
+	bottom: 0;
+}
+.todo ul li {
+	width: 100%;
+	margin-bottom: 4px;
+  position: relative;
+}
+.todo ul li div {
+	padding: 8px;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow:0 1px 1px #aaa;
+}

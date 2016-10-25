@@ -1,0 +1,126 @@
+.clock {
+  height: 160px;
+}
+.seg {
+  position: relative;
+  display: inline-block;
+}
+.seg div {
+  display: inline-block;
+
+}
+
+.flip-wrapper {
+  position: relative;
+  height: 128px;
+  display: inline-block;
+  width: 128px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  margin: 0 2px;
+}
+
+.ampm {
+  position: absolute;
+  color: #7e7e7e;
+  z-index: 3;
+  right: 8px;
+  bottom: 8px;
+}
+
+.flip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0 8px;
+  width: 100%;
+  color: black;
+  background: white;
+  font-weight: normal;
+  font-size: 88px;
+  text-align: center;
+  font-weight: 400;
+
+}
+.flip--top, .flip--bottom {
+  overflow: hidden;
+}
+
+.flip--top {
+  transform-origin: bottom;
+  height: 50%;
+  z-index: 2;
+  backface-visibility: hidden;
+  background-color: #f5f5f5;
+  border-bottom:  1px solid #D3D3D3;
+}
+.flipTopAnimation {
+  animation: flip 350ms linear ;
+}
+
+.flipBackAnimation {
+  animation: flip-back 350ms linear ;
+  background-color: white !important;
+}
+.flip--back {
+  line-height: 0;
+  transform-origin: top;
+
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(90deg);
+
+  margin-top: 60px;
+  background-color: #fafafa;
+  transformation-origin: 0;
+}
+
+.flip--bottom {
+  height: 50%;
+  margin-top: 60px;
+  line-height: 0;
+  z-index: 1;
+}
+
+@-webkit-keyframes flip {
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+}
+
+@-webkit-keyframes flip-back {
+  to {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@media screen and (max-width : 1089px){
+  .flip--top {
+    position: absolute;
+    top: 8px;
+  }
+  .flip-wrapper {
+    width: 96px;
+  }
+  .flip {
+    font-size: 75px;
+  }
+}
+
+@media screen and (max-width : 820px){
+
+  .flip-wrapper {
+    width: 128px;
+  }
+  .flip {
+    font-size: 80px;
+  }
+}

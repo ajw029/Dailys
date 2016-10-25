@@ -1,0 +1,422 @@
+.bookmarks_clock {
+	height: 100%;
+	text-align: center;
+}
+.bookmarks_clock h1, .bookmarks_clock h2  {
+	font-size: 42px !important;
+	display: inline-block !important;
+	width: auto !important;
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flatButtonContainer {
+	text-align: center;
+}
+
+.flatSquareButton {
+	height: 48px;
+	width: 128px;
+	padding: 16px;
+	background-color: #2196F3;
+	color: white;
+	margin: 0 auto;
+}
+.flatSquareButton.deleteSquare {
+	background-color: #F44336;
+}
+
+.flatButtonContainer .flatSquareButton {
+	margin-top: 8px;
+}
+
+.googleCardContainers {
+	/*margin-top: 48px;*/
+}
+.googleCardContainers section {
+	margin-top:  0;
+}
+.bookmark .settings_button {
+	position: absolute;
+	height: 24px;
+	z-index: 4999;
+	top: 20px;
+ 	right: 16px;
+}
+.bookmark .refresh_button {
+	position: absolute;
+	height: 24px;
+	z-index: 4999;
+	top: 20px;
+ 	right: 40px;
+}
+.bookmark .settings_button:hover {
+	cursor: pointer;
+}
+.bookmark .settings_button img,
+.bookmark .refresh_button img {
+	height: 100%;
+}
+
+.bookmark.weather {
+	height: 100%;
+}
+
+.bookmark.weather .weathercontainer{
+	height: 48px;
+	width: 100%;
+}
+
+.bookmark.schedule, .bookmark.package {
+	min-height: 276px;
+	height: 100%;
+}
+
+.bookmark.schedule .todoScheduleContainer {
+	width: 98%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.todoScheduleContainer ul li div:hover {
+	box-shadow: 0 1px 1px #aaa;
+}
+
+.bookmark.schedule .todoScheduleContainer ul,
+.bookmark.package ul {
+	list-style-type: none;
+	width: 98%;
+	margin: 0 auto;
+	margin-top: 8px;
+}
+
+.bookmark.schedule .todoScheduleContainer ul li div,
+.bookmark.schedule .packageTrackerContainer .package_tracking_info {
+	height: 128px;
+	width: 100%;
+	box-shadow: 0 1px 1px #aaa;
+	padding: 16px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.bookmark.schedule .todoScheduleContainer ul li div h1,
+.bookmark.schedule .packageTrackerContainer .package_tracking_info h1 {
+	font-size: 24px;
+	color: #4CAF50;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+}
+.bookmark.schedule .todoScheduleContainer ul li div h2,
+.bookmark.schedule .packageTrackerContainer .package_tracking_info h2 {
+	font-size: 18px;
+}
+
+.todoAddInnerContainer .inputgroup, .todoAddInnerContainer .labelgroup {
+	width: 70%;
+}
+.todoAddInnerContainer .inputgroup input,
+.todoAddInnerContainer .inputgroup textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+.inputselect {
+		width: 70%;
+		margin: 0 auto;
+}
+
+
+/* */
+.weathercontainer-more {
+	width: 100%;
+	margin-top: 16px;
+}
+.weathercontainer-more .moreweather {
+	width: 98%;
+	margin: 0 auto;
+	height: 48px;
+	padding: 8px;
+	border-radius: 1px;
+	margin-bottom: 8px;
+	color: white;
+}
+.moreweather h1 {
+	color: white;
+	position: relative;
+	width: auto !important;
+	display: inline-block;
+}
+/* Location Form */
+.location-form {
+	height: 32px;
+	width: 100%;
+	position: relative;
+}
+.location-search {
+	width: 80%;
+	height: 32px;
+	padding: 8px;
+	font-size: 16px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-left: 1px;
+	border-top: 1px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #a9a9a9;
+}
+.location-button {
+	width: 20%;
+	padding: 8px;
+	height: 32px;
+	font-size: 16px;
+	line-height: 16px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #FF9800;
+	color: white;
+}
+.location-searchResults {
+	width: 100%;
+	list-style: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.location-searchResults li {
+	width: 100%;
+	height: 32px;
+	margin-bottom: 4px;
+	border-left: 2px solid #8BC34A;
+}
+.location-searchResults li p {
+	width: 80%;
+	height: 32px;
+	line-height: 32px;
+	vertical-align: top;
+	display: inline-block;
+	padding-left: 4px;
+}
+
+.location-searchResults li button {
+	width: 20%;
+	display: inline-block;
+	background-color: #4CAF50;
+	padding: 4px;
+	height: 32px;
+	line-height: 12px;
+	font-size: 14px;
+	color: white;
+	vertical-align: top;
+}
+
+/* Extra Weather Info */
+.weather #w_monthAndDate {
+	font-size: 28px !important;
+	display: inline-block;
+}
+.weather #w_monthAndDate::first-line {
+	color: red;
+}
+.weather #w_dayOfTheWeek {
+	font-size: 18px !important;
+	display: inline-block;
+	font-weight: 400;
+}
+.moreweatherInnerContainer {
+	width: 100%;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.moreweather:hover {
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.moreweather [class*="wi-"] {
+	color: white;
+	font-size: 22px !important;
+	float: right !important;
+}
+
+.weathercontainer-more {
+	border-radius: 8px;
+}
+
+.weathercontainer-more .moreweatheraddButton {
+	width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 32px;
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.weathercontainer-more .moreweatheraddButton:hover {
+	cursor: pointer;
+}
+
+.weathercontainer-more .moreweatheraddButton img {
+	height: 100%;
+}
+
+.weathercontainer-more .moreweatheraddButton  span {
+	height: 100%;
+	color: white;
+	font-size: 20px !important;
+	position: relative;
+	top: -25%;
+}
+
+.weathercontainer-more .moreweather:last-child {
+	margin-bottom: 32px;
+}
+
+.weathercontainer-more .add_button{
+	background-color:#03A9F4;
+}
+
+.weathercontainer-more .moreweather.morning {
+	background-color:#ffb63b;
+}
+
+.weathercontainer-more .moreweather.afternoon {
+	background-color: #55c5f8;
+}
+
+.weathercontainer-more .moreweather.night {
+	background-color: #556f7b;
+}
+
+.bookmark.weather i {
+	font-size: 48px;
+	display: inline-block;
+	float: left;
+}
+.bookmark.weather h1 {
+	font-size: 22px;
+	margin-bottom: 8px;
+}
+
+.moreweatherInnerContainer h4 {
+	font-size: 22px !important;
+	width: auto;
+	display: inline-block;
+	color: white;
+}
+.moreweatherInnerContainer h4:nth-child(2) {
+	float: right;
+}
+.moreweatherInnerContainer i {
+	margin-top: 4px;
+	margin-right: 8px;
+}
+.weatherOption .active{
+	color: #2196F3;
+}
+.weatherOption button, .weatherOption h3 {
+	display: inline-block !important;
+	width: auto !important;
+	font-size: 18px;
+}
+
+.bookmark.weather h2 {
+	margin-left: 16px;
+	font-size: 48px;
+	display: inline-block;;
+	float: left;
+	width: auto !important;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wi-day-sunny {
+	color: #FFEB3B;
+	-webkit-animation: rotateCog 10s infinite;
+	-moz-animation:    rotateCog 10s infinite;
+	-o-animation:      rotateCog 10s infinite;
+	animation:         rotateCog 10s infinite;
+}
+
+.wi-night-alt-cloudy, .wi-day-cloudy {
+	color: #7e7e7e;
+}
+.wi-day-cloudy-windy {
+	color: #7e7e7e;
+}
+.bookmark h2, .bookmark h3 {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+.label--checkbox {
+  position: relative;
+  line-height: 135%;
+	width: 70%;
+  cursor: pointer;
+}
+
+.checkbox {
+	display: inline-block;
+  position: relative;
+  top: -3px;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+	width: 20px;
+}
+.checkbox:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #cccccc;
+}
+.checkbox:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: #2196F3;
+  border-top-style: none;
+  border-right-style: none;
+}
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width : 680px){
+	.container .slide-container {
+		margin-top: 0;
+	}
+	.slide {
+		padding: 0;
+	}
+	.googleCardContainers {
+			margin-top: 54px;
+	}
+}

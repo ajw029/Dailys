@@ -1,0 +1,82 @@
+.sidebar {
+  width: 192px;
+  height: calc(100% );
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid #eee;
+  position: relative;
+  background-color: white
+}
+.sidebar .sidebar-header {
+  padding: 16px;
+}
+
+.sidebar div.divider {
+  width: 90%;
+  height: 1px;
+  background-color: grey;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sidebar  .sidebar-header h1 {
+  font-size: 18px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidebar ul {
+  width: 100%;
+}
+.sidebar ul li {
+  height: 48px;
+  width: 100%;
+  list-style-type: none;
+}
+
+.sidebar ul li button {
+  height: 48px;
+  width: 100%;
+  text-align: left;
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.sidebar ul li i {
+  width: 25px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: black;
+  line-height: 48px;
+  padding-left: 16px;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+}
+.sidebar ul li a:hover,
+.sidebar ul li button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul.bottom-nav {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar .fa-bookmark {
+  color: #F44336;
+}
+.sidebar .fa-sun-o {
+  color: #FFEB3B;
+}
+
+.sidebar .fa-archive {
+  color: #795548;
+}
+
+.sidebar .fa-check-square-o {
+  color: #4CAF50;
+}
